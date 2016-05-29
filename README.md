@@ -3,7 +3,7 @@ Counting Out Problem
 
 ##### Summary:
 This is an sbt project that solves a *counting out problem*. Read [the Josephus problem](https://en.wikipedia.org/wiki/Josephus_problem) for a more detailed explanation.
-Test specification are expressed using [ the Specs2 framework](https://etorreborre.github.io/specs2/)
+Test specifications are expressed using [ the Specs2 framework](https://etorreborre.github.io/specs2/)
 
 ##### To run the project:
 * `git clone <repo>`
