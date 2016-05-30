@@ -6,7 +6,7 @@ class CountingOutSpec extends org.specs2.mutable.Specification {
       CountingOut.getPlaceToStandInTheCircle(-1, 5) must throwA[java.lang.IllegalArgumentException]
       CountingOut.getPlaceToStandInTheCircle(3, -1) must throwA[java.lang.IllegalArgumentException]
     }
-    "Where n = 3, and k = 2" >> {
+    "Where n == 3, and k == 2" >> {
       CountingOut.getPlaceToStandInTheCircle(3, 2) must_== 3
     }
     "Where n < k" >> {
@@ -32,7 +32,7 @@ class CountingOutSpec extends org.specs2.mutable.Specification {
       CountingOut.getPlaceToStandInTheCircle(9, 9) must_== 8
       CountingOut.getPlaceToStandInTheCircle(999, 999) must_== 335
     }
-    "Where n is very large, and k = 2" >> {
+    "Where n is very large, and k == 2" >> {
       CountingOut.getPlaceToStandInTheCircle(800, 2) must_== 577
       CountingOut.getPlaceToStandInTheCircle(900, 2) must_== 777
       CountingOut.getPlaceToStandInTheCircle(1000, 2) must_== 977
