@@ -9,17 +9,17 @@ class CountingOutSpec extends org.specs2.mutable.Specification {
     "Where n = 3, and k = 2" >> {
       CountingOut.getPlaceToStandInTheCircle(3, 2) must_== 3
     }
-    "Where n > k" >> {
+    "Where n < k" >> {
       CountingOut.getPlaceToStandInTheCircle(2, 5) must_== 2
       CountingOut.getPlaceToStandInTheCircle(3, 5) must_== 1
       CountingOut.getPlaceToStandInTheCircle(4, 5) must_== 2
-      CountingOut.getPlaceToStandInTheCircle(3, 10) must_== 2
+      CountingOut.getPlaceToStandInTheCircle(3, 999) must_== 2
     }
-    "Where n < k" >> {
+    "Where n > k" >> {
       CountingOut.getPlaceToStandInTheCircle(5, 2) must_== 3
       CountingOut.getPlaceToStandInTheCircle(5, 3) must_== 4
       CountingOut.getPlaceToStandInTheCircle(5, 4) must_== 1
-      CountingOut.getPlaceToStandInTheCircle(10, 3) must_== 4
+      CountingOut.getPlaceToStandInTheCircle(999, 3) must_== 601
     }
     "Where n == k" >> {
       CountingOut.getPlaceToStandInTheCircle(2, 2) must_== 1
@@ -30,9 +30,9 @@ class CountingOutSpec extends org.specs2.mutable.Specification {
       CountingOut.getPlaceToStandInTheCircle(7, 7) must_== 5
       CountingOut.getPlaceToStandInTheCircle(8, 8) must_== 4
       CountingOut.getPlaceToStandInTheCircle(9, 9) must_== 8
-      CountingOut.getPlaceToStandInTheCircle(10, 10) must_== 8
+      CountingOut.getPlaceToStandInTheCircle(999, 999) must_== 335
     }
-    "Where n is very large, and k =2" >> {
+    "Where n is very large, and k = 2" >> {
       CountingOut.getPlaceToStandInTheCircle(800, 2) must_== 577
       CountingOut.getPlaceToStandInTheCircle(900, 2) must_== 777
       CountingOut.getPlaceToStandInTheCircle(1000, 2) must_== 977
